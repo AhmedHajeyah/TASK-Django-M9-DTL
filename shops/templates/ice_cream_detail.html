@@ -1,0 +1,26 @@
+<!-- Create a templates folder inside of shops and add an ice_cream_detail.html file.
+The template should render the entire context passed to it. -->
+
+<html>
+    <head>
+        <title>Ice Cream Detail</title>
+    </head>
+    <body>
+        <h1>Ice Cream Detail</h1>
+        <p>
+        <strong>Name:</strong> {{name}}<br>
+        </p>
+        <p>
+            {%for flavor in flavors%}
+                <strong>Flavor:</strong> {{flavor}}<br>
+            {%endfor%}
+        <strong>Flavor:</strong> {{flavors}}<br>
+        </p>
+        <p>
+        <strong>Shops:</strong> {{shop}}<br>
+        </p>
+        <p>
+        <strong>Stock:</strong> {{stock}}<br>
+        </p>
+    </body>
+</html>

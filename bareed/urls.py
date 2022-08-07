@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# Add your get_ice_cream view to bareed/url.py.
+# Name it ice-cream-detail, and make sure to add ice_cream_id to the path.
+from shops import views
+
 urlpatterns = [
     path("admin/", admin.site.urls),
-]
+    path("ice-cream-detail/<int:ice_cream_id>/", views.get_ice_cream),
+    ]
